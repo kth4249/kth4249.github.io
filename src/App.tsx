@@ -2,8 +2,11 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Counter from './Counter';
+import { useRoutes } from 'react-router';
+import routes from './routes';
 
 function App() {
+  const content = useRoutes(routes);
   // return (
   //   <div className="App">
   //     <header className="App-header">
@@ -23,7 +26,8 @@ function App() {
   //   </div>
   // );
   return (
-    <Counter />
+    // <Counter />
+    content
   )
 }
 

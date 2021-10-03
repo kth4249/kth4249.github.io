@@ -19,8 +19,9 @@ const Home: FC = () => {
   return (
     <>
       <Helmet>
-        <title>Material Kit Pro</title>
+        <title>Home - Taehan's Blog</title>
       </Helmet>
+      home
       {/* <div>
         <HomeHero />
         <HomeOverview />
