@@ -3,6 +3,9 @@ import type { FC, ReactNode } from "react";
 import PropTypes from "prop-types";
 import { Outlet } from "react-router-dom";
 import { experimentalStyled } from "@material-ui/core/styles";
+import MainNavbar from "./MainNavbar";
+import MainSidebar from "./MainSidebar";
+import Footer from "./Footer";
 // import Footer from './Footer';
 // import MainNavbar from './MainNavbar';
 // import MainSidebar from './MainSidebar';
@@ -18,9 +21,23 @@ const MainLayoutRoot = experimentalStyled("div")(({ theme }) => ({
 }));
 
 const MainLayout: FC<MainLayoutProps> = ({ children }) => {
+  const [isSidebarMobileOpen, setIsSidebarMobileOpen] = useState<boolean>(false);
+  
   return (
-    <MainLayoutRoot>
-      {/* <MainNavbar
+    // <MainLayoutRoot>
+    //   <MainNavbar
+    //     onSidebarMobileOpen={(): void => setIsSidebarMobileOpen(true)}
+    //     />
+    //     <MainSidebar
+    //     onMobileClose={(): void => setIsSidebarMobileOpen(false)}
+    //     openMobile={isSidebarMobileOpen}
+    //     />
+    //     {children || <Outlet />}
+    //   <Footer />
+    //   {children || <Outlet />}
+    // </MainLayoutRoot>
+    <>
+      <MainNavbar
         onSidebarMobileOpen={(): void => setIsSidebarMobileOpen(true)}
         />
         <MainSidebar
@@ -28,10 +45,9 @@ const MainLayout: FC<MainLayoutProps> = ({ children }) => {
         openMobile={isSidebarMobileOpen}
         />
         {children || <Outlet />}
-      <Footer /> */}
+      <Footer />
       {children || <Outlet />}
-      {/* {children} */}
-    </MainLayoutRoot>
+    </>
   );
 };
 

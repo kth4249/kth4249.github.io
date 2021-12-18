@@ -21,7 +21,7 @@ const Home: FC = () => {
       <Helmet>
         <title>Home - Taehan's Blog</title>
       </Helmet>
-      home
+      home2
       {/* <div>
         <HomeHero />
         <HomeOverview />

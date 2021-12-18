@@ -1,7 +1,7 @@
 import { lazy, Suspense } from 'react';
 import type { PartialRouteObject } from 'react-router';
 import LoadingScreen from './components/LoadingScreen';
-import MainLayout from './components/MainLayout';
+import MainLayout from './components/layout/MainLayout';
 
 const Loadable = (Component:any) => (props:any) => (
   <Suspense fallback={<LoadingScreen />}>
