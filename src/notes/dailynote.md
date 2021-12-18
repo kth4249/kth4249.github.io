@@ -10,3 +10,11 @@
 * Navibar 구성
 
 ---
+
+# 2021.12.18
+* Layout 구성 및 theme 적용
+* ThemeContext, SettingContext 적용
+
+### **_to do:_**
+* Layout Custom
+* Theme Custom
