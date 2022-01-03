@@ -1,12 +1,10 @@
+import { ThemeProvider } from '@material-ui/core';
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Counter from './Counter';
 import { useRoutes } from 'react-router';
+import './App.css';
+import useSettings from './hooks/useSettings';
 import routes from './routes';
 import { createCustomTheme } from './theme';
-import useSettings from './hooks/useSettings';
-import { ThemeProvider } from '@material-ui/core';
 
 function App() {
   const content = useRoutes(routes);
@@ -23,7 +21,6 @@ function App() {
     <ThemeProvider theme={theme}>
       {content}
     </ThemeProvider>
-    
   )
 }
 

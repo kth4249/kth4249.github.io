@@ -24,19 +24,7 @@ const MainLayout: FC<MainLayoutProps> = ({ children }) => {
   const [isSidebarMobileOpen, setIsSidebarMobileOpen] = useState<boolean>(false);
   
   return (
-    // <MainLayoutRoot>
-    //   <MainNavbar
-    //     onSidebarMobileOpen={(): void => setIsSidebarMobileOpen(true)}
-    //     />
-    //     <MainSidebar
-    //     onMobileClose={(): void => setIsSidebarMobileOpen(false)}
-    //     openMobile={isSidebarMobileOpen}
-    //     />
-    //     {children || <Outlet />}
-    //   <Footer />
-    //   {children || <Outlet />}
-    // </MainLayoutRoot>
-    <>
+    <MainLayoutRoot>
       <MainNavbar
         onSidebarMobileOpen={(): void => setIsSidebarMobileOpen(true)}
         />
@@ -46,8 +34,7 @@ const MainLayout: FC<MainLayoutProps> = ({ children }) => {
         />
         {children || <Outlet />}
       <Footer />
-      {children || <Outlet />}
-    </>
+    </MainLayoutRoot>
   );
 };
 
